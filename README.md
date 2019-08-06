@@ -6,3 +6,5 @@ If you run the script it have a little test example.
 You could use it as a imported module.
 
 Created with Python 3.6
+
+Francisco Meléndez
