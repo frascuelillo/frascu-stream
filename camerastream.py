@@ -28,7 +28,7 @@ class CameraStream:
 		cicles=20
 		while self.stop == False:
 			if count==0:
-				inicio=time.clock()
+				inicio=time.perf_counter()
 			self.ret, self.frame = self.cap.read()
 			if self.ret==False:
 				print('No frame received from camera, thread stopped')
@@ -36,7 +36,7 @@ class CameraStream:
 			count = count+1
 			if count==cicles:
 
-				end=time.clock()
+				end=time.perf_counter()
 				elapsed=end-inicio
 
 				self.fps_stream=int((1/elapsed)*cicles)
